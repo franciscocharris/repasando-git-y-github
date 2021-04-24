@@ -1,1 +1,4 @@
-hola este es un nuevo documento , ademas estoy aprendiendo git y github por fin, sigo en proceso
+git 
+hola este es un nuevo documento , 
+ademas estoy aprendiendo git y github por fin
+pepe
