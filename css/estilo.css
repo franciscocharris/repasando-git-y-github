@@ -3,3 +3,14 @@ body{
     text-align:center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.container{
+    width: 90%;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    border: 1px solid black;
+}
+
+.container .post h1{
+    color:blue;
+}
