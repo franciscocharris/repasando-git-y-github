@@ -1,10 +1,12 @@
 
-
+**trabajando con guthub**
+-trerse algo de github con protocolo https
+git remote add origin direccion_protocolo_http
 
 **branch**
-cambiar de ramas
+-cambiar de ramas
 git checkout nombre_branch
-mostrar ramas 
+-mostrar ramas 
 git branch
 
 
@@ -20,4 +22,4 @@ git push origin --tags publicar tags a github
 
 git tag -d nombre_del_tag : eliminar un tag 
 
-git push origin :refs/tags/dormido  : eliminar el tag en github
+git push origin :refs/tags/nombre del tag  : eliminar el tag en github
