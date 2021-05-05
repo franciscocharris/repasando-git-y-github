@@ -1,8 +1,16 @@
 
+
+**git comands**
+-regresar a los cambios de un commit anterior
+ git reset caff5af277e0bf2ab238bd6ff9a3f968cda7ceae --har
+
+-hacer un merge
+git merge nombre_branch_a_combinar
+
 **añadir usuario por cada computadora**
 
 
-**trabajando con guthub**
+**trabajando con github**
 -trerse algo de github con protocolo  --https--
 git remote add origin direccion_protocolo_http
 
@@ -13,6 +21,9 @@ git remote set-url origin url_repositorio
 git pull origin master --allow-unrelated-histories
 
 
+**colaborando en un proyecto open source de github**
+-claro ya tengo my repositorio que es un fork del proyecto original,pero para poder tenerlo actualizado cada que ellos lo actualizan ,tengo que añadir otra fuente de infomacion
+git remote add upstream link_repositorio_original
 
 **branch**
 -crear branch
@@ -22,10 +33,13 @@ git checkout nombre_branch
 -mostrar ramas 
 git branch
 
--mostar todas las ramas locales y remotas
+-traerse los cambios de una rama remotas
+estado en la rama de la que vas a extraer : git remote add nombre_branch
+ 
+-mostar todas las branch locales y remotas
 git show-ref
 
--subir las ramas en local a remoto
+-subir las branch en local a remoto
 git push origin nombre_rama
 
 **alias**
