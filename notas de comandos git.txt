@@ -1,16 +1,16 @@
 
 
-**git comands**
+**********git comands**********
 -regresar a los cambios de un commit anterior
  git reset caff5af277e0bf2ab238bd6ff9a3f968cda7ceae --hard
 
 -hacer un merge
 git merge nombre_branch_a_combinar
 
-**añadir usuario por cada computadora**
+**********añadir usuario por cada computadora**********
 
 
-**trabajando con github**
+**********trabajando con github**********
 -trerse algo de github con protocolo  --https--
 git remote add origin direccion_protocolo_http
 
@@ -21,37 +21,64 @@ git remote set-url origin url_repositorio
 git pull origin master --allow-unrelated-histories
 
 
-**colaborando en un proyecto open source de github**
+**********colaborando en un proyecto open source de github**********
 -claro ya tengo my repositorio que es un fork del proyecto original,pero para poder tenerlo actualizado cada que ellos lo actualizan ,tengo que añadir otra fuente de infomacion
 git remote add upstream link_repositorio_original
 
-**branch**
+**********branch**********
 -crear branch
-git branch nombre_rama
+*git branch nombre_rama
 -cambiar de ramas
-git checkout nombre_branch
+*git checkout nombre_branch
 -mostrar ramas 
-git branch
+*git branch
 
+-eliminar ramas
+*git branch -D nombre_rama
+
+-rebase
+primero se hace unn rebase en la rama aparte del master
+*git rebase master
+luego se hace un rebase desde master a la rama que se hizo
+git rebase nombre_rama_aparte
+
+**********branch en  github****************
 -traerse los cambios de una rama remotas
-estado en la rama de la que vas a extraer : git remote add nombre_branch
+*estado en la rama de la que vas a extraer : git remote add nombre_branch
 
 -mostar todas las branch locales y remotas
-git show-ref
+*git show-ref
 
 -subir las branch en local a remoto
-git push origin nombre_rama
+*git push origin nombre_rama
 
-**alias**
-alias  Nombre_alias="comando largo en git" - crear alias
-git tag - listar alia
+**********alias**********
+*alias  Nombre_alias="comando largo en git" - crear alias
+*git tag - listar alia
 
-**tags**
+**********tags**********
 
-git tag -a nombre_del_tag -m "el mensaje" serie corta del commit (eje: 8dc1daa)
-git show-ref --tag  : muestra los tags locales
-git push origin --tags publicar tags a github
+*git tag -a nombre_del_tag -m "el mensaje" serie corta del commit (eje: 8dc1daa)
+*git show-ref --tag  : muestra los tags locales
+*git push origin --tags publicar tags a github
 
-git tag -d nombre_del_tag : eliminar un tag 
+*git tag -d nombre_del_tag : eliminar un tag 
 
-git push origin :refs/tags/nombre del tag  : eliminar el tag en github
+*git push origin :refs/tags/nombre del tag  : eliminar el tag en github
+
+
+***********los stash**************
+-algo asi como un trabajito adelantado pero quiero ver lo que habia antes
+se hace
+*git stash
+-reviso lo que habia en la otra rama , no mas pa ver (cambios entre ramas para revisar)
+*git stash pop  y listo , no paso nada
+
+-listar los stash
+*git stash list
+
+-ahora para poner ese cambio en otra rama
+*git stash branch nombre_rama 
+
+-borrar stash
+*git stash drop
