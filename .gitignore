@@ -1,1 +1,2 @@
 # para que me ignore los archivos que no quiero que se suban al repo
+*.log
