@@ -2,7 +2,11 @@
 
 **********git comands**********
 -regresar a los cambios de un commit anterior
- git reset caff5af277e0bf2ab238bd6ff9a3f968cda7ceae --hard
+*git reset caff5af277e0bf2ab238bd6ff9a3f968cda7ceae --hard 
+
+ ó
+
+*git reset --HARD hash_corto_del_commit
 
 -hacer un merge
 git merge nombre_branch_a_combinar
@@ -28,18 +32,22 @@ git remote add upstream link_repositorio_original
 **********branch**********
 -crear branch
 *git branch nombre_rama
+
 -cambiar de ramas
 *git checkout nombre_branch
+
 -mostrar ramas 
 *git branch
 
 -eliminar ramas
 *git branch -D nombre_rama
 
--rebase
-primero se hace unn rebase en la rama aparte del master
+-rebase : 
+
+-primero se hace unn rebase en la rama aparte del master
 *git rebase master
-luego se hace un rebase desde master a la rama que se hizo
+
+-luego se hace un rebase desde master a la rama que se hizo
 git rebase nombre_rama_aparte
 
 **********branch en  github****************
@@ -47,7 +55,10 @@ git rebase nombre_rama_aparte
 *estado en la rama de la que vas a extraer : git remote add nombre_branch
 
 -mostar todas las branch locales y remotas
-*git show-ref
+*git show-ref  ó *git branch -a
+
+-ver solo las remotas
+*git branch -r 
 
 -subir las branch en local a remoto
 *git push origin nombre_rama
@@ -55,6 +66,9 @@ git rebase nombre_rama_aparte
 **********alias**********
 *alias  Nombre_alias="comando largo en git" - crear alias
 *git tag - listar alia
+
+-hacer alias globales
+*git config --global alias.nombre_alias  "comando_largo"
 
 **********tags**********
 
@@ -71,8 +85,9 @@ git rebase nombre_rama_aparte
 -algo asi como un trabajito adelantado pero quiero ver lo que habia antes
 se hace
 *git stash
+
 -reviso lo que habia en la otra rama , no mas pa ver (cambios entre ramas para revisar)
-*git stash pop  y listo , no paso nada
+*git stash pop  y listo , vuelven los cambios que hiciste 
 
 -listar los stash
 *git stash list
@@ -82,3 +97,58 @@ se hace
 
 -borrar stash
 *git stash drop
+
+**************limpiar archivos del proyecto no deseados********************
+-para preparar y saber que va a borrar
+*git clean --dry-run
+
+-borrar los archivos
+*git clean -f   (ojo los de gitignore no les hace nada)
+
+***********cherry-pick traerse cualquier commit de una rama a la rama master*****************
+*git cherry-pick hash_corto_del_commit (eje: 26ba24c)
+
+***********para agregar cambios que se olvidaron añadir al commit****************
+si se te olvida hacer un cambio y ya hiciste un commit, se pude remendar con un codigo que agrega esos cambios al ultimo commit hecho
+*git commit --amend
+
+*********ver una historia mas completa de todo que git log ***********
+*git reflog
+
+********comandos curiosos**********
+
+******git grep *******
+-para buscar palabras o algo en tu proyecto y saber la linea exacta donde esta
+*git grep -n Palabra_a_buscar o "Palabra_o_codigo_a_buscar"
+
+-para saber la cantidad de veces que se utiliza
+*git grep -c Palabra_a_buscar o "Palabra_o_codigo_a_buscar"
+
+-buscar palabras en los commits
+*git grep -S "Palabra_a_buscar"
+
+******
+-saber cuantos commits hizo cada colaborador y el mensaje del commit
+*git shortlog
+
+-para saber solo las personas sin los mensajes
+*git shortlog -sn
+
+-tambien para ver los commits ,incluso los borrados
+*git shortlog -sn --all
+
+-tambien para ver todos los commits ,sin merges
+*git shortlog -sn --all --no-merges
+
+-para ver quienes son los responsables y sus lineas en un archivo especifico
+*git blame nombre_archivo
+
+-para verlo mas organizado lo de arriba
+*git blame -c nombre_archivo
+
+-para ver la ayuda de todos los comandos ()
+*git blame --help
+
+-saber quien hizo tal cosa en cierto pedazo de codigo de un archivo
+*git blame estilo.css -L35,53  (desde la linea tal hasta la linea tal)
+
