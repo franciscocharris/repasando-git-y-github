@@ -1,4 +1,14 @@
+********ver historial y cosas asi***********
+-ver todos comandos hechos
+*history
+- aplicar el mismo comando del history,
+* ! numero_de_la_izquierda_del_comando
 
+-ver el historial de commits de un archivo
+*git log nombre_del_archivo
+
+-ver archivo en un commit anterior soo para ver
+* git checkout caff5af277e0bf2ab238bd6ff9a3f968cda7ceae nombre_del_archivo
 
 **********git comands**********
 -regresar a los cambios de un commit anterior
