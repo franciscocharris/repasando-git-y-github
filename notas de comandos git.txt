@@ -10,6 +10,12 @@
 -ver archivo en un commit anterior soo para ver
 * git checkout caff5af277e0bf2ab238bd6ff9a3f968cda7ceae nombre_del_archivo
 
+-ver todos los commits (todos)
+*git log --all
+
+-ver todos los commits de manera mas clara
+*git log --all --graph --decorate --oneline
+
 **********git comands**********
 -regresar a los cambios de un commit anterior
 *git reset caff5af277e0bf2ab238bd6ff9a3f968cda7ceae --hard 
@@ -61,8 +67,11 @@ git remote add upstream link_repositorio_original
 git rebase nombre_rama_aparte
 
 **********branch en  github****************
+-traerse una rama remota a local
+* git pull origin nombre_rama
+
 -traerse los cambios de una rama remotas
-*estado en la rama de la que vas a extraer : git remote add nombre_branch
+*estando en la rama de la que vas a extraer : git remote add nombre_branch 
 
 -mostar todas las branch locales y remotas
 *git show-ref  ó *git branch -a
